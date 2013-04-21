@@ -1,0 +1,28 @@
+
+
+{"friendlyVersion": "0.1",
+ "versionDefName": "SPACE_INVADERS_RESOURCES",
+ "media": [
+        {
+            "type": "png",
+            "defName": "IMAGE_MENU_ICON",
+            "file": "images/si_icon.png"
+        },
+        {
+            "type": "font",
+            "defName": "FONT_SPACEINVADERS_30",
+            "file": "fonts/spaceinvaders/spaceinvaders.ttf"
+        },
+        {
+            "type": "font",
+            "defName": "FONT_SPACEINVADERS_20",
+            "file": "fonts/spaceinvaders/spaceinvaders.ttf"
+        },
+        {
+            "type": "font",
+            "defName": "FONT_SPACEINVADERS_10",
+            "file": "fonts/spaceinvaders/spaceinvaders.ttf"
+        }
+
+	  ]
+}
