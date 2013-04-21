@@ -87,11 +87,18 @@ void handle_tick(AppContextRef ctx, PebbleTickEvent *t) {
   } else {
     layer_set_frame(&text_second_layer.layer, GRect(120-(tsec*2), 138, 82, 29));
   }
-  layer_set_frame(&text_m1_layer.layer, GRect(3, 125, 82, 24));
-  layer_set_frame(&text_m2_layer.layer, GRect(39, 125, 82, 24));
-  layer_set_frame(&text_m3_layer.layer, GRect(75, 125, 82, 24));
-  layer_set_frame(&text_m4_layer.layer, GRect(111, 125, 82, 24));
+  layer_set_frame(&text_m1_layer.layer, GRect(3, 125, 82, 19));
+  layer_set_frame(&text_m2_layer.layer, GRect(39, 125, 82, 19));
+  layer_set_frame(&text_m3_layer.layer, GRect(75, 125, 82, 19));
+  layer_set_frame(&text_m4_layer.layer, GRect(111, 125, 82, 19));
+  
   if (((t->units_changed & MINUTE_UNIT) != 0)||(init==1))  {
+    if (tmin == 0){
+      text_layer_set_text(&text_m1_layer, " ");
+      text_layer_set_text(&text_m2_layer, " ");
+      text_layer_set_text(&text_m3_layer, " ");
+      text_layer_set_text(&text_m4_layer, " ");
+    }
     if (tmin >= 15){
       //put in full block 1
       text_layer_set_text(&text_m1_layer, "?");
